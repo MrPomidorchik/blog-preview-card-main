@@ -1,34 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Blog preview card</title>
 
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @font-face {
+        font-family: "Figtree";
+        src: url(./assets/fonts/static/Figtree-Medium.ttf) format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Figtree";
+        src: url(./assets/fonts/static/Figtree-ExtraBold.ttf) format("truetype");
+        font-weight: 800;
+        font-style: normal;
+      }
+      body {
+        margin: 0;
+        padding: 0 30px;
+        font-family: "Figtree", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: hsl(0, 0%, 42%);
+        background-color: hsl(47, 88%, 63%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .blog-preview-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+        max-width: 325px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 15px;
+        border: 2px solid hsl(0, 0%, 7%);
+        box-shadow: 5px 5px 0px hsl(0, 0%, 7%);
+        cursor: default;
+      }
+      .blog-preview-card__image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .blog-preview-card__category {
+        font-size: 13px;
+        font-weight: 800;
+        color: hsl(0, 0%, 7%);
+        margin: 0;
+        margin-top: 20px;
+        padding: 5px 10px;
+        background-color: hsl(47, 88%, 63%);
+        border-radius: 3px;
+      }
+      .blog-preview-card__date {
+        font-size: 13px;
+        color: hsl(0, 0%, 7%);
+        margin: 0;
+        margin-top: 15px;
+      }
+      .blog-preview-card__title {
+        font-size: 23px;
+        font-weight: 800;
+        color: hsl(0, 0%, 7%);
+        margin: 20px 0;
+      }
+      .blog-preview-card__title:hover {
+        color: hsl(47, 88%, 63%);
+        cursor: pointer;
+      }
+      .blog-preview-card__description {
+        margin: 0;
+        font-size: clamp(14px, 16px, 16px);
+        line-height: 1.5;
+      }
+      .blog-preview-card__footer {
+        margin: 0;
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .blog-preview-card__footer img {
+        width: 30px;
+        border-radius: 50%;
+      }
+      .blog-preview-card__footer p {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 800;
+        color: hsl(0, 0%, 7%);
+      }
+      .attribution {
+        font-size: 11px;
+        position: fixed;
+        bottom: 1vh;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="blog-preview-card">
+      <img
+        class="blog-preview-card__image"
+        src="./assets/images/illustration-article.svg"
+        alt="Illustration article"
+      />
+      <span class="blog-preview-card__category">Learning</span>
+      <time class="blog-preview-card__date" datetime="2023-12-21"
+        >Published 21 Dec 2023</time
+      >
+      <h2 class="blog-preview-card__title">HTML & CSS foundations</h2>
+      <p class="blog-preview-card__description">
+        These languages are the backbone of every website, defining structure
+        content, and presentation.
+      </p>
+      <footer class="blog-preview-card__footer">
+        <img
+          class="blog-preview-card__author-image"
+          src="./assets/images/image-avatar.webp"
+          alt="Greg Hooper avatar"
+        />
+        <p>Greg Hooper</p>
+      </footer>
+    </article>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://t.me/mrpomidorchik" target="_blank">@mrpomidorchik</a>.
+    </div>
+  </body>
 </html>
